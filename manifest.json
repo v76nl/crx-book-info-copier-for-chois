@@ -1,0 +1,15 @@
+{
+    "manifest_version": 3,
+    "name": "Book Infomation Copier",
+    "version": "1.0",
+    "description": "CHOIS (中央大学蔵書検索システム) で、本の情報をクリップボードにコピーします",
+    "permissions": ["scripting", "activeTab", "clipboardWrite"],
+    "content_scripts": [
+      {
+        "matches": ["https://ufinity.library.chuo-u.ac.jp/*"],
+        "js": ["content.js"],
+        "run_at": "document_idle"
+      }
+    ]
+  }
+  
