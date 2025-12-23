@@ -71,13 +71,18 @@
     }
 
     async function collectAndCopy() {
-        const bookTitleElm = document.querySelector('div > h3.opac_book_title');
-        const bookAuthorElm = document.querySelector('div > div.opac_book_bibliograph');
+        const bookTitleElm    = document.querySelector('div > h3.opac_book_title');
+        const bookAuthorElm   = document.querySelector('div > div.opac_book_bibliograph');
         const bookLocationElm = document.querySelector('tr:has( > th.syozoukan) > td');
-        const callNumberElm = document.querySelector('td.seikyu > a');
-        const url = window.location.href;
+        const callNumberElm   = document.querySelector('td.seikyu > a');
+        const url             = window.location.href;
 
-        const isExistAll = bookTitleElm && bookAuthorElm && bookLocationElm && callNumberElm && url 
+        const isExistAll = 
+            bookTitleElm && 
+            bookAuthorElm && 
+            bookLocationElm && 
+            callNumberElm && 
+            url;
         if (isExistAll) {
             const title = bookTitleElm.textContent.trim();
             const author = bookAuthorElm.textContent.trim();
