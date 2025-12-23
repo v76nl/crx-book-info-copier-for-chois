@@ -1,8 +1,6 @@
 (function () {
     'use strict';
 
-    const collectedPairs = [];
-
     const buttonStyle = {
         position: 'fixed',
         bottom: '20px',
@@ -75,16 +73,19 @@
     async function collectAndCopy() {
         const bookTitleElm = document.querySelector('div > h3.opac_book_title');
         const bookAuthorElm = document.querySelector('div > div.opac_book_bibliograph');
+        const bookLocationElm = document.querySelector('tr:has( > th.syozoukan) > td');
+        const callNumberElm = document.querySelector('td.seikyu > a');
         const url = window.location.href;
 
-        if (bookTitleElm && bookAuthorElm && url) {
+        const isExistAll = bookTitleElm && bookAuthorElm && bookLocationElm && callNumberElm && url 
+        if (isExistAll) {
             const title = bookTitleElm.textContent.trim();
             const author = bookAuthorElm.textContent.trim();
-            const pair = `${title} - ${author}\n${url}`;
-            // const pair = `${answer}｜${word}`; // 「英単語日本語」 の形
-            collectedPairs.push(pair);
+            const bookLocation = bookLocationElm.textContent.trim();
+            const callNumber = callNumberElm.textContent.trim();
+            // const pair = `${title} - ${author}\n${url}`;
 
-            const textToCopy = collectedPairs.join('\n');
+            const textToCopy = `タイトル: ${title}\n著者: ${author}\n場所: ${bookLocation} - ${callNumber}\nURL: ${url}`;
 
             try {
                 await navigator.clipboard.writeText(textToCopy);
@@ -94,7 +95,12 @@
                 showNotification('コピーに失敗しました');
             }
         } else {
-            showNotification('タイトルまたは著者が見つかりません');
+            showNotification('いずれかの要素が見つかりません');
+            console.log(`bookTitleElm:\n${bookTitleElm}`);
+            console.log(`bookAuthorElm:\n${bookAuthorElm}`);
+            console.log(`locationElm:\n${locationElm}`);
+            console.log(`callNumberElm:\n${callNumberElm}`);
+            // console.log(`:\n${}`);
         }
     }
 
