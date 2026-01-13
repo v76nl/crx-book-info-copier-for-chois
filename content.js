@@ -115,7 +115,7 @@
 
     // ショートカットキー対応：Ctrl + Shift + Y
     document.addEventListener('keydown', function (event) {
-        console.log(event); // 追加
+        console.log(event);
         if (event.ctrlKey && event.shiftKey && event.code === 'KeyY') {
             event.preventDefault(); // 他の動作とバッティング防止
             collectAndCopy();
