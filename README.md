@@ -1,4 +1,4 @@
-# crx-chois-book-information-copier
+# crx-book-info-copier-for-chois
 
 中央大学図書館 蔵書検索システム CHOIS において、書籍タイトル、著者、配置場所、ページURLをまとめてコピーするボタンを設置するChrome拡張機能
 
@@ -20,10 +20,10 @@
    通常はダウンロードフォルダに保存されています。
 2. ZIPファイルを右クリックし、すべて展開を選択します。
 3. 展開先フォルダを指定して解凍します。  
-   - 例：C:\Users\user\Documents\ChromeExtensions\crx-chois-book-information-copier
+   - 例：C:\Users\user\Documents\ChromeExtensions\crx-book-info-copier-for-chois
    - 注意：  
         拡張機能フォルダはあとからも使うため、ドキュメント内などに保存してください。
-4. 解凍が完了したら、 crx-chois-book-information-copier フォルダの場所を覚えておきます。
+4. 解凍が完了したら、 crx-book-info-copier-for-chois フォルダの場所を覚えておきます。
 
 ### macOS の場合
 
@@ -31,10 +31,10 @@
    通常はダウンロードフォルダに保存されています。
 2. ZIPファイルをダブルクリックすると、自動的に解凍されます。
 3. 解凍されてできたフォルダを移動します。  
-   - 例：/Users/user/Documents/ChromeExtensions/crx-chois-book-information-copier
+   - 例：/Users/user/Documents/ChromeExtensions/crx-book-info-copier-for-chois
    - 注意：  
         拡張機能フォルダはあとからも使うため、ドキュメント内などに保存してください。
-4. 移動後の  crx-chois-book-information-copier フォルダの場所を覚えておきます。
+4. 移動後の  crx-book-info-copier-for-chois フォルダの場所を覚えておきます。
 
 ## 3. Chrome の拡張機能ページを開く
 
@@ -56,9 +56,9 @@
 2. フォルダを選択するダイアログが開きます。
 3. 先ほど解凍した先のフォルダを選択します。  
    - Windows の例：  
-     C:\Users\user\Documents\ChromeExtensions\crx-chois-book-information-copier
+     C:\Users\user\Documents\ChromeExtensions\crx-book-info-copier-for-chois
    - macOS の例：  
-     /Users/user/Documents/ChromeExtensions/crx-chois-book-information-copier
+     /Users/user/Documents/ChromeExtensions/crx-book-info-copier-for-chois
 4. フォルダを選択してフォルダーの選択をクリックします。
 
 ## 6. インストール完了を確認する
